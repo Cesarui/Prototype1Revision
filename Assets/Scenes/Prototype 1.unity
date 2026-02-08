@@ -433,8 +433,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DriverController
   speed: 15
-  turnSpeed: 15
+  turnSpeed: 40
   horizontalInput: 0
+  forwardInput: 0
 --- !u!54 &476164141
 Rigidbody:
   m_ObjectHideFlags: 0
