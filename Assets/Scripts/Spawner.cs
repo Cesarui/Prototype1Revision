@@ -8,16 +8,14 @@ public class Spawner : MonoBehaviour
     public float cooldown = 5f;
 
     float time = 0;
-    bool timeStarted = false;
 
+    // Spwans a traffic car. 
     public void Spawn(GameObject gameObject)
     {
-        Instantiate(gameObject, new Vector3(5, 0, 180), new Quaternion(0, 1, 0, 0));
+        Instantiate(gameObject, transform.position, transform.rotation);
     }
-
     public void Start()
     {
-        timeStarted = true;
         Spawn(trafficCar);
     }
 
@@ -26,13 +24,12 @@ public class Spawner : MonoBehaviour
         time += Time.deltaTime;
         Debug.Log("Time: " + time.ToString());
 
-        if (timeStarted == true && time == cooldown)
+        // Checks if time reached cooldown to decrease it by that number and simulate cooldown
+        if (time > cooldown)
         {
-            Debug.Log("Spawned Car");
-            //Spawn(TrafficCar);
-            time = 0;
+            Spawn(trafficCar);
+            time -= cooldown;
         }
-
-        
     }
+
 }
