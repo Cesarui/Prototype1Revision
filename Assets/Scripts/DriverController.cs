@@ -30,8 +30,8 @@ public class DriverController : MonoBehaviour
         // Moves the car forward.
         transform.Translate(Vector3.forward * speed * Time.deltaTime * forwardInput);
         // Rotates the car.
-        // Note: horizontalInput can only be -1, 0 or 1 which is why the car won't move even if turnSpeed is above 0 because if horizontal is 0
-        // it will all be 0.
+        // Note to self: horizontalInput can only be -1, 0 or 1 which is why the car won't move even if turnSpeed is above 0 because if horizontal is 0
+        // it will all be 0. Also Rotate is what takes care of rotation along an axis.
         transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * horizontalInput);
 
         // Rotation and Position feedback.

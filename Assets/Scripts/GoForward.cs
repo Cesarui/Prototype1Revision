@@ -8,6 +8,7 @@ public class GoForward : MonoBehaviour
 
     void Update()
     {
+        // Note to self: Translate is what takes care of moving the object along an axis.
         transform.Translate(Vector3.back * speed * Time.deltaTime);
     }
 }
