@@ -17,8 +17,8 @@ public class DriverController : MonoBehaviour
 
     void Start()
     {
-        // Makes sure it's enabled once the game starts.
-        secondCamera.enabled = true;
+        // Makes sure it's disabled once the game starts so the player only sees the main camera.
+        secondCamera.enabled = false;
 
         // A reference the car's rigid body.
         rb = GetComponent<Rigidbody>();
