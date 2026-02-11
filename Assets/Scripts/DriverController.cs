@@ -13,6 +13,8 @@ public class DriverController : MonoBehaviour
 
     private Rigidbody rb;
 
+    public Camera secondCamera;
+
     void Start()
     {
         // A reference the car's rigid body.
@@ -40,6 +42,16 @@ public class DriverController : MonoBehaviour
             Debug.Log("Current Rotation along the Y: " + transform.rotation.y.ToString() 
                  + "\nCurrent Position along the Z: " + transform.position.z.ToString());
         }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            secondCamera.enabled = false;
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            secondCamera.enabled = true;
+        }
+
     }
     
 }

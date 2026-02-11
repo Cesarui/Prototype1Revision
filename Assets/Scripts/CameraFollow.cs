@@ -6,7 +6,7 @@ public class CameraFollow : MonoBehaviour
 
     public Transform driver;
 
-    private Vector3 cameraOffset = new Vector3(0, 10, -10);
+    public Vector3 cameraOffset = new Vector3(0, 10, -10);
 
     void Start()
     {
