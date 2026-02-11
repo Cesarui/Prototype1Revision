@@ -17,6 +17,9 @@ public class DriverController : MonoBehaviour
 
     void Start()
     {
+        // Makes sure it's enabled once the game starts.
+        secondCamera.enabled = true;
+
         // A reference the car's rigid body.
         rb = GetComponent<Rigidbody>();
 
@@ -43,6 +46,8 @@ public class DriverController : MonoBehaviour
                  + "\nCurrent Position along the Z: " + transform.position.z.ToString());
         }
 
+        // There is a more efficient way like having a boolean and keeping track if it was pressed.
+        // For now I just want to be as straightforward as I can.
         if (Input.GetKey(KeyCode.Q))
         {
             secondCamera.enabled = false;
