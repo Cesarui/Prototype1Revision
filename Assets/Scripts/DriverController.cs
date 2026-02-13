@@ -12,6 +12,9 @@ public class DriverController : MonoBehaviour
     private float horizontalInput;
     private float forwardInput;
 
+    [SerializeField] private string horizontalAxis = "Horizontal";
+    [SerializeField] private string verticalAxis = "Vertical";
+
     private Rigidbody rb;
 
     public Camera secondCamera;
@@ -30,8 +33,8 @@ public class DriverController : MonoBehaviour
 
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        forwardInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxis(horizontalAxis);
+        forwardInput = Input.GetAxis(verticalAxis);
 
         // Moves the car forward.
         transform.Translate(Vector3.forward * speed * Time.deltaTime * forwardInput);
