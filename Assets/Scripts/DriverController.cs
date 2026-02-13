@@ -7,8 +7,8 @@ public class DriverController : MonoBehaviour
     // Notes: Vector3 is a way to represent 3D space coordinates.
     // RigidBody is a component & camera is another component, but both of things belong to a GameObject.
 
-    private int speed = 15;
-    private float turnSpeed = 40;
+    [SerializeField] private int speed = 15;
+    [SerializeField] private float turnSpeed = 40;
     private float horizontalInput;
     private float forwardInput;
 
