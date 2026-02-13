@@ -17,7 +17,9 @@ public class DriverController : MonoBehaviour
 
     private Rigidbody rb;
 
-    public Camera secondCamera;
+    [SerializeField] private Camera secondCamera;
+    [SerializeField] private KeyCode cameraOnKey = KeyCode.E;
+    [SerializeField] private KeyCode cameraOffKey = KeyCode.G;
 
     void Start()
     {
@@ -52,11 +54,11 @@ public class DriverController : MonoBehaviour
 
         // There is a more efficient way like having a boolean and keeping track if it was pressed.
         // For now I just want to be as straightforward as I can.
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(cameraOffKey))
         {
             secondCamera.enabled = false;
         }
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(cameraOnKey))
         {
             secondCamera.enabled = true;
         }
