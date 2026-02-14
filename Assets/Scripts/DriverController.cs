@@ -12,12 +12,14 @@ public class DriverController : MonoBehaviour
     private float horizontalInput;
     private float forwardInput;
 
+    // These are the variables that store what axis Input should get, so it can be customizable. 
     [SerializeField] private string horizontalAxis = "Horizontal";
     [SerializeField] private string verticalAxis = "Vertical";
 
     private Rigidbody rb;
 
     [SerializeField] private Camera secondCamera;
+    // Customizable keybinds.
     [SerializeField] private KeyCode cameraOnKey = KeyCode.E;
     [SerializeField] private KeyCode cameraOffKey = KeyCode.G;
 
